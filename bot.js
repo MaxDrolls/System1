@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['579377912780816410'];
+const devs = ['594197177362939906'];
 const db = require('quick.db');
-const premium = ['594197177362939906']
+const premium = ['579377912780816410']
 const client = new Discord.Client();
 const bot = new Discord.Client();
 const giphy = require('giphy-api')();
@@ -217,7 +217,7 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
   });
   credits[message.author.id] = {
-      credits: m + 0.5,
+      credits: m + 0.0,
   }
 
     if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
@@ -330,8 +330,8 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
             if(!message.channel.guild) return;
              if(message.content.startsWith(prefix + 'invite-codes')) {
 let guild = message.guild
-var codes = [""]
-message.channel.send(":postbox: **لقد قمت بأرسال جميع روابط الدعوات التي قمت بأنشائها في الخاص**")
+var codes = ["رابط"]
+message.channel.send(":postbox: **تم ارسال رابط سيرفر في خاص**")
 guild.fetchInvites()
 .then(invites => {
 invites.forEach(invite => {
