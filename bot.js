@@ -2736,7 +2736,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-					.setFooter("3bker Community ©")
+					.setFooter("System")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 
 					// eslint-disable-next-line max-depth
@@ -2799,30 +2799,30 @@ ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
 			return msg.channel.send('تم إيقاف الموسيقى مؤقتا!');
-		}//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+		}//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 		return msg.channel.send('لا يوجد شيء حالي ف العمل.');
 	} else if (command === "resume") {
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
 			serverQueue.connection.dispatcher.resume();
 			return msg.channel.send('استأنفت الموسيقى بالنسبة لك !');
-		}//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+		}//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 		return msg.channel.send('لا يوجد شيء حالي في العمل.');
 	}
 
 	return undefined;
 });
-//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 async function handleVideo(video, msg, voiceChannel, playlist = false) {
 	const serverQueue = queue.get(msg.guild.id);
 	console.log(video);
-	//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+	//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 //	console.log('yao: ' + Util.escapeMarkdown(video.thumbnailUrl));
 	const song = {
 		id: video.id,
 		title: Util.escapeMarkdown(video.title),
 		url: `https://www.youtube.com/watch?v=${video.id}`
-	};//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+	};//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 	if (!serverQueue) {
 		const queueConstruct = {
 			textChannel: msg.channel,
@@ -2833,9 +2833,9 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 			playing: true
 		};//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
 		queue.set(msg.guild.id, queueConstruct);
-//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 		queueConstruct.songs.push(song);
-//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+//by ,$ Thomas !#3364?? , ء 'CODES SERVER'
 		try {
 			var connection = await voiceChannel.join();
 			queueConstruct.connection = connection;
@@ -2858,7 +2858,7 @@ function play(guild, song) {
 	const serverQueue = queue.get(guild.id);
 
 	if (!song) {//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-		serverQueue.voiceChannel.leave();
+		serverQueue.voiceChannel.join();
 		queue.delete(guild.id);
 		return;//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
 	}//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
@@ -2881,7 +2881,7 @@ const adminprefix = "$vip";//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
 client.on('message', message => {//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
-    message.reply("**`only for Bot Owner`**")
+    message.reply("**``**")
 if (message.content.startsWith(adminprefix + 'setgame')) {//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
   client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
