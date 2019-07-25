@@ -217,7 +217,7 @@ fs.writeFile("./ThomasAndMayaCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
   });
   credits[message.author.id] = {
-      credits: m + 555555,
+      credits: m + 0.0,
   }
 
     if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
