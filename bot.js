@@ -217,7 +217,7 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
   });
   credits[message.author.id] = {
-      credits: m + 99999999,
+      credits: m + 0.10,
   }
 
     if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
@@ -226,7 +226,7 @@ message.channel.send(`**${message.author.username}, your :credit_card: balance i
 });
 
 client.on('message', async message => {
-    let amount = 2500000000;
+    let amount = 685;
     if(message.content.startsWith(prefix + "daily")) {
     if(message.author.bot) return;
     if(coolDown.has(message.author.id)) return message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes in \`\`1 Day\`\`.**`);
