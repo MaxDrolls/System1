@@ -236,14 +236,6 @@ client.on('message', async message => {
     credits[message.author.id] = {
     credits: m
     };
-
-    fs.writeFile("./creditsCode.json", JSON.stringify(userData.credits + amount), (err) => {
-    if (err) console.error(err);
-    });
-
-    message.channel.send(`**:atm: | ${message.author.username}, you received your :yen: ${amount} credits!**`).then(() => {
-        coolDown.add(message.author.id);
-    });
 	    
 client.on('message', async message => {
     let amount = 250;
