@@ -213,11 +213,11 @@ if(!credits[message.author.id]) credits[message.author.id] = {
 let userData = credits[message.author.id];
 let m = userData.credits;
 
-fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
+fs.writeFile("./ThomasAndMayaCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
   });
   credits[message.author.id] = {
-      credits: m + 0.0,
+      credits: m + 555555,
   }
 
     if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
